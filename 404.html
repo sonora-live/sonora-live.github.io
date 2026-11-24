@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sonora Live</title>
+  <script>
+    (function() {
+      var path = window.location.pathname;
+      var match = path.match(/^\/sonora-live(?:\/(.*))?$/i);
+      if (match) {
+        var sub = match[1] || '';
+        window.location.replace("https://sonora-live.github.io/" + sub + window.location.search + window.location.hash);
+        return;
+      }
+      window.location.replace("https://sonora-live.github.io/");
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="https://sonora-live.github.io/">sonora-live.github.io</a>...</p>
+</body>
+</html>
